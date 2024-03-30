@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="AdminLTE/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="AdminLTE/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="http://yourdomain.com/css/adminlte.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -146,7 +148,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('user.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thành viên</p>
                 </a>
@@ -342,7 +344,9 @@
 
 
           <!-- Nội dung hiển thị bên phải -->
-
+          @yield('right-content')
+          
+          
 
 
           <!-- right col -->
@@ -398,5 +402,7 @@
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="AdminLTE/dist/js/pages/dashboard.js"></script>
+<script src="http://yourdomain.com/js/jquery.min.js"></script>
+
 </body>
 </html>
